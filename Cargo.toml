@@ -11,4 +11,20 @@ tokio = { version = "1", features = ["macros"] }
 tracing = "0.1"
 tracing-subscriber = "0.3"
 serde_json = "1.0"
-serde = { version = "1.0.143", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+
+# rbatis required
+rbs = "0.1"
+# logging lib(required)
+log = "0.4"
+fast_log="1.5"
+# rbatis (required)
+rbatis =  { version = "4.0" }
+# rbdc driver (required)
+rbdc={version="0.1"}
+# choose any rbdc drivier
+# rbdc-sqlite={version="0.1"}
+rbdc-mysql={version="0.1"}
+#rbdc-pg={version="0.1"}
+#rbdc-mssql={version="0.1"}
+#rbdc-oracle={version="0.1"}

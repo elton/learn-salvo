@@ -17,7 +17,13 @@ async fn hello_world() -> Result<&'static str, ()> {
 }
 
 #[handler]
-pub async fn get_user(_req: &mut Request, res: &mut Response) {
+pub async fn get_user(req: &mut Request, res: &mut Response) {
+    tracing::info!(
+        "remote address: {:?}",
+        req.remote_addr().unwrap().as_ipv4().unwrap().ip()
+    );
+    // tracing::info!("headers: {:?}", req.headers());
+
     let user = User {
         id: 1,
         username: "admin".to_string(),
